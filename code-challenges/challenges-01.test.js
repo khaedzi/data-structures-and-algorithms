@@ -56,7 +56,7 @@ Use `forEach` to loop over the input array. The modified strings should each be 
   
     arr.forEach(value => {
       var ss=value.toUpperCase();
-      localArray.push();
+      localArray.push(ss);
     });
   
     return localArray;
@@ -86,9 +86,10 @@ words.forEach(value=>{
   
   localArray.push(callback(value))
   
-  return localArray;
+ 
 
 })
+return localArray;
 }
 
 
