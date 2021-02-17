@@ -128,11 +128,7 @@ Here is an example of the input:
 const sortByPrice = (arr) => {
   
 
-arr.sort(compare)
-return arr;
-
-function compare(a,b){ 
-  return a.price - b.price;
+  return arr.sort((a, b) => a.price - b.price);
 }
 };
 
