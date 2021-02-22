@@ -7,7 +7,7 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
-  // Solution code here...
+  return string.replace(/0/g, 'zero');
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,14 +57,14 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
 
   let newArray=[];
-arr.map(function ()
-{forEach(element=>{
-let ss=Math.pow(element,2)
+for(let i=0;i<arr.length;i++){
 
-newArray.push(ss);
-});
+newArray.push(Math.pow(2,arr[i]))
 
+}
 
+return newArray;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -72,8 +72,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
-};
+  let newArray=[];
+  arr.forEach(element => newArray.push(Math.pow(2,element)))
+
+  
+  return newArray;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -82,8 +86,13 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
-};
+  
+  let myNewArray=[];
+  arr.map(ele=>myNewArray.push(Math.pow(2,ele)))
+
+
+  return myNewArray;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
