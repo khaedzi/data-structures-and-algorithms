@@ -49,6 +49,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {const oddValues = (arr) => arr.filter(value => value % 2 !== 0);}
 return oddValues;
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -148,6 +149,7 @@ CHALLENGE 9 - Stretch Goal
 
 Write a function named getCharactersWithoutChildren that, given the array of characters, below, uses filter to return an array of all characters without children.
 ------------------------------------------------------------------------------------------------ */
+
 
 const characters = [
   {
