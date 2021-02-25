@@ -17,9 +17,13 @@ Becomes:
 <li>age: 32</li>
 ]
 ------------------------------------------------------------------------------------------------ */
-
-function transformToLis(obj){
+function transformToLis(obj) {
   // Solution code here...
+  const localArray = [];
+  for (const [key, value] of Object.entries(obj)) {
+    localArray.push(`<li>${key}: ${value}</li>`);
+  }
+  return localArray;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,10 +33,15 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => {
-  // Solution code here...
-};
 
+function addValues(arr) {
+  // Solution code here...
+  let total = arr.reduce((com, val) => {
+    com += val;
+    return com;
+  }, 0);
+  return total;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -45,10 +54,14 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
-};
 
+const addPurchases = (arr) => {
+  let total = arr.reduce((com, val) => {
+    com += val.purchasePrice;
+    return com;
+  }, 0);
+  return total;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -58,7 +71,7 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  return arr.reduce(accumator => accumator += 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,8 +130,12 @@ let starWarsData = [{
   gender: 'female'
 }];
 
+
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((accumulator, character, idx) => {
+    accumulator[idx] = character.name;
+    return accumulator;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,10 +146,12 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  // Solution code here...
+const reversedString = (arr) => {
+  return arr.split('').reduce((accumulator, value, idx) => {
+    accumulator += arr[arr.length - 1 - idx];
+    return accumulator;
+  }, '');
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
