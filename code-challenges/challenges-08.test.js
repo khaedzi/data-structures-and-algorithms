@@ -8,7 +8,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  let mm=str.split("")splice(-10)
+  let mm=str.split("").splice(-10)
   return mm;
 
 }
@@ -47,8 +47,11 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const oddValues = (arr) => {const oddValues = (arr) => arr.filter(value => value % 2 !== 0);}
-return oddValues;
+const oddValues = (arr) => {
+  return arr.filter(value => value % 2 !== 0)
+  
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
