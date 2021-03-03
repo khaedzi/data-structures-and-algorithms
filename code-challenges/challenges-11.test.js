@@ -1,5 +1,5 @@
 'use strict';
-
+/^(\d{4})$/.test(pin);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -12,8 +12,8 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  let out= people.map(element => `${element.firstName} ${element.lastName}`);
-  return out;
+  let fullName=people.map(element=> `${element.firstName} ${element.lastName}`);
+return fullName;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +24,11 @@ Write a function named validatePin that uses a regular expression pattern to val
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
-const validatePin = (pin) =>  /^(\d{4})$/.test(pin);
+const validatePin = (pin) => {
+
+
+
+} 
 
 
 /* ------------------------------------------------------------------------------------------------
