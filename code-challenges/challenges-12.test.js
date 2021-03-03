@@ -9,12 +9,15 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
- let myresult =arr.reduce((cur,acc)=>{
-Math.max(cur,acc)
-  })
+  let maxe=arr.reduce((a,b)=>{
 
-  return myresult;
-};
+  let mylarge=Math.max(a,b);
+  return mylarge;
+  }
+  
+  )
+
+return maxe;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,16 +34,16 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  let myNewArray=[];
-  matrix.map(data=>{
-data.map(value=>{
+  let myAre=[]
+let ss=matrix.map(value=>{
+value.map(data=>{
+myAre.push(data);
 
-  myNewArray.push(value);
 })
 
-  })
- let myresult=Math.max(myNewArray);
- return myresult;
+
+})
+return Math.max(...myAre);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,8 +61,14 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  let sum = 0;
-  matrix.forEach(arr => arr.forEach(value => sum += value));
+  var sum=0;
+  let mylar=matrix.map(val=>{
+  
+    val.map(value=>{
+  sum+=value;
+  
+    })
+  });
   return sum;
 };
 
@@ -87,17 +96,32 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let myresult = [];
-  var sum = 0;
-  for (let i = 0; i < stores[0].length; i++) {
-    for (let j = 0; j < stores.length; j++) {
-      sum += stores[j][i];
-    }
-    myresult.push(sum);
-    sum = 0;
-  }
-  return myresult;
+//   for (i = 0; i < a.length; i++) {
+//     var merged = []
 
+// for (i = 0; i < firstPike.length; i++) {
+//   merged.push(appendArrays(firstPike[i], seaTac[i], seattleCenter[i],capHill[i],alkiBeach[i]));
+// }
+// console.log(merged);
+
+// function appendArrays() {
+//   var temp = []
+//   for (var i = 0; i < arguments.length; i++) {
+//     temp.push(arguments[i]);
+//   }
+//   return temp;
+// }
+// return
+let output = [];
+var sum = 0;
+for (let i = 0; i < stores[0].length; i++) {
+  for (let j = 0; j < stores.length; j++) {
+    sum += stores[j][i];
+  }
+  output.push(sum);
+  sum = 0;
+}
+return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -111,7 +135,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let myoutput = [];
+  data.forEach((value, idx) => {
+    output.push({ sales: `${value} cookies`, time: `${hours[idx]}` });
+  });
+  return myoutput;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,7 +164,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let treats = 0;
+  arr.forEach(object => object.items.forEach(element => element.name === 'Treats' ? treats = element.quantity : treats));
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
